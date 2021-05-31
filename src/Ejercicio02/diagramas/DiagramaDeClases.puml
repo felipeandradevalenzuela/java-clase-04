@@ -1,0 +1,53 @@
+@startuml Diagramas
+
+class Vehiculo {
+    - int velocidad
+    - int aceleracion
+    - int ruedas
+    - int peso
+    - float anguloDeGiro
+    - String patente
+}
+
+class Carrera {
+    - float distancia
+    - float premioEnDolares
+    - String nombre
+    - int cantidadDeVehiculosPermitidos
+    - Vehiculo ganador
+    - List<vehiculo> participantes
+    + darDeAltaAuto(velocidad,aceleracion,AnguloDeGiro,patente)
+    + darDeAltaMoto(velocidad,aceleracion,AnguloDeGiro,patente)
+    + eliminarVehiculo(vehículo)
+    + eliminarVehiculoConPatente(String unaPatente)
+    + obtenerGanador()
+    + calcularganador()
+    + socorrerAuto(Sring patente)
+    + socorrerMoto(String patente)
+}
+
+class Moto {
+    - final int peso = 300
+    - final int ruedas = 2
+}
+
+class Auto {
+    - final int peso = 1000
+    - final int ruedas = 4
+}
+
+class SocorristaAuto {
+    + socorrer(Auto unAuto)
+}
+
+class SocorristaMoto {
+    + socorrer(Moto unaMoto)
+}
+
+Vehiculo <|-- Auto
+Vehiculo <|-- Moto
+Carrera ..> SocorristaAuto
+Carrera ..> SocorristaMoto
+Carrera "1" *-- "many" Vehiculo
+
+@enduml
