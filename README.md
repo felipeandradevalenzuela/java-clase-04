@@ -87,3 +87,24 @@ Agregar a la carrera la responsabilidad de socorrer una moto y un auto:
 public void socorrerAuto(String patente);
 	public void socorrerMoto(String patente);
 - [x] Completado
+
+
+## Ejercicio 3 💡
+
+La empresa organizadora de eventos Marte Group S.A nos solicita implementar el sistema para el gran evento del centenario de “La Chiqui” Legrand. 
+
+Este evento tendrá: 
+- Lista de Invitados
+- Los invitados de Meli
+- Los Invitados Standard. 
+- Lista de fuegos artificiales 
+- Los fuegos artificiales individuales. 
+- Los packs de fuegos artificiales: los packs pueden contener uno o más fuegos artificiales individuales e incluso pueden contener otros packs. 
+
+El momento más importante de este evento es cuando “La Chiqui” apaga las velas de la torta. En este momento sucederán dos eventos: 
+
+Por un lado, Marte Group S.A reventará todos los fuegos artificiales. Por lo tanto, a la empresa le interesa poder contar con toda la lista de fuegos artificiales disponibles. 
+Por otro lado, Marte Group S.A distribuirá porciones de la torta más grande de América a todos los invitados, para que puedan degustarla. Sin embargo, el sistema debe tomar en consideración que los invitados de Meli después de comer la porción gritarán “Viva la Chiqui!!”. 
+
+Aclaración 1: Cada fuego artificial individual al explotar hace su propio ruido. 
+Aclaración 2: Crear una clase Main y crear los objetos necesarios para probar el sistema. 
