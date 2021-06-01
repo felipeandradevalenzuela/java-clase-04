@@ -1,0 +1,36 @@
+@startuml Diagramas
+
+class Invitado {
+    - int identificador
+    - String nombre
+    - TipoInvitado empresa
+}
+
+enum TipoInvitado {
+    - Meli
+    - Standard
+}
+
+class FuegoArtificial {
+    - int identificador
+    - TipoFuego tipo
+}
+
+enum TipoFuego {
+    - individual
+    - pack
+}
+
+class Evento {
+    - int identificador
+    - List<Invitado> invitados
+    - List<FuegoArtificial> fuegosArtificiales
+}
+
+
+Invitado "1" --* "many" TipoInvitado
+FuegoArtificial "1" --* "many" TipoFuego
+Evento "1" --* "many" Invitado
+Evento "1" --* "many" FuegoArtificial
+
+@enduml
